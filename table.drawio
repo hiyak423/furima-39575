@@ -406,7 +406,7 @@
                 <mxCell id="224" value="email" style="text;strokeColor=#000000;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="223" vertex="1">
                     <mxGeometry y="26" width="150" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="225" value="password" style="text;strokeColor=#000000;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="223" vertex="1">
+                <mxCell id="225" value="encrypted_password" style="text;strokeColor=#000000;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="223" vertex="1">
                     <mxGeometry y="56" width="150" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="229" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;entryX=0.002;entryY=1.16;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=ERone;startFill=0;targetPerimeterSpacing=10;endSize=10;startSize=10;sourcePerimeterSpacing=10;fontColor=#000000;strokeColor=#000000;" parent="1" edge="1">

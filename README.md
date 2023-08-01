@@ -31,10 +31,13 @@ Things you may want to cover:
 | last_name          | string              | null:false                   |
 | first_name_kana    | string              | null:false                   |
 | last_name_kana     | string              | null:false                   |
-| birthday           | data                | null:false                   |
+| birthday           | date                | null:false                   |
+| encrypted_password | string              | null:false,unique: true      |
+| email              | string              | null:false,unique: true      |
 ### Association
-  has_many items, has_many orders
-
+  has_many :items
+  has_many :orders
+  
 ## items テーブル
 | Column             | Type                | Options                      |
 |--------------------|---------------------|------------------------------|
@@ -48,7 +51,8 @@ Things you may want to cover:
 | price              | integer             | null:false                   |
 | user               | references          | null:false foreign_key: true |
 ### Association
-  has_one order, belongs_to user 
+  has_one :order
+  belongs_to :user 
 
 ## orders テーブル
 | Column             | Type                | Options                      |
@@ -56,7 +60,9 @@ Things you may want to cover:
 | user               | references          | null:false foreign_key: true |
 | item               | references          | null:false foreign_key: true |
 ### Association
-has_one shipping, belongs_to item, belongs_to user
+has_one :shipping
+belongs_to :item
+belongs_to :user
 
 ## shippings テーブル
 | Column             | Type                | Options                      |
@@ -69,4 +75,4 @@ has_one shipping, belongs_to item, belongs_to user
 | phone_number       | string              | null:false                   |
 | order              | references          | null:false foreign_key: true |
 ### Association
-belongs_to order
+belongs_to :order
