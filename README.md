@@ -23,50 +23,46 @@ Things you may want to cover:
 
 * ...
 
-## users テーブル
-| Column             | Type                | Options                      |
-|--------------------|---------------------|------------------------------|
-| nickname           | string              | null:false                   |
-| first_name         | string              | null:false                   |
-| last_name          | string              | null:false                   |
-| first_name_kana    | string              | null:false                   |
-| last_name_kana     | string              | null:false                   |
-| birthday           | data                | null:false                   |
-### Association
-  has_many items, has_many orders
+## table_name
+Column          Type    Options
 
-## items テーブル
-| Column             | Type                | Options                      |
-|--------------------|---------------------|------------------------------|
-| name               | string              | null:false                   |
-| description        | text                | null:false                   |
-| category_id        | integer             | null:false                   |
-| status_id          | integer             | null:false                   |
-| shipping_cost_id   | integer             | null:false                   |
-| shipping_area_id   | integer             | null:false                   |
-| shipping_day_id    | integer             | null:false                   |
-| price              | integer             | null:false                   |
-| user               | references          | null:false foreign_key: true |
-### Association
-  has_one order, belongs_to user 
+## users
+nickname        string  null:false
+first_name      string  null:false
+last_name       string  null:false
+first_name_kana string  null:false
+last_name_kana  string  null:false
+birth_year      integer null:false
+birth_month     integer null:false
+birth_day       integer null:false
 
-## orders テーブル
-| Column             | Type                | Options                      |
-|--------------------|---------------------|------------------------------|
-| user               | references          | null:false foreign_key: true |
-| item               | references          | null:false foreign_key: true |
-### Association
-has_one shipping, belongs_to item, belongs_to user
+## items
+name           string   null:false
+description    text     null:false
+category       integer  null:false
+status         integer  null:false
+shipping_cost  integer  null:false
+shipping_area  integer  null:false
+shipping_day   integer  null:false
+price          integer  null:false
+user_id        references null:false foreign_key: true
 
-## shippings　テーブル
-| Column             | Type                | Options                      |
-|--------------------|---------------------|------------------------------|
-| postcode           | string              | null:false                   |
-| shipping_area_id   | integer             | null:false                   |
-| city               | string              | null:false                   |
-| block              | string              | null:false                   |
-| building           | string              |                              |
-| phone_number       | string              | null:false                   |
-| order              | references          | null:false foreign_key: true |
+### Association
+has_one order, belongs_to user
+
+## orders
+user_id        references null:false foreign_key: true
+item_id        references null:false foreign_key: true
+### Association
+has_one order, belongs_to user
+
+## shippings
+postcode       string   null:false
+prefecture     integer  null:false
+city           string   null:false
+block          string   null:false
+building       string   
+phone_number   string   null:false
+order_id       references null:false foreign_key: true
 ### Association
 belongs_to order
