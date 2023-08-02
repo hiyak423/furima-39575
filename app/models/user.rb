@@ -17,6 +17,9 @@ class User < ApplicationRecord
     validates :last_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
     validates :birthday
     validates :email, uniqueness: true
+    # パスワードは、半角英数字混合
+    VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+    validates :password, format: { with: VALID_PASSWORD_REGEX }
     validates :password, length: { minimum: 6 }
   end
 end
