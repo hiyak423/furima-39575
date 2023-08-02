@@ -8,8 +8,8 @@
     </h1>
   </div>
 
-  <% render 'shared/error_messages', model: f.object %>
-  <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+  <%= render 'shared/error_messages', model: f.object %>
+  <%# エラー発生時にメッセージを表示%>
 
   <div class="form-group">
     <div class='form-text-wrap'>
