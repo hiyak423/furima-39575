@@ -38,22 +38,22 @@ RSpec.describe User, type: :model do
       it '名前が全角（漢字・ひらがな・カタカナ）ではない' do
         @user.first_name = 'dai'
         @user.valid?
-        expect(@user.errors.full_messages).to include('First name is invalid')
+        expect(@user.errors.full_messages).to include('First name Input full-width characters' )
       end
       it '名字が全角（漢字・ひらがな・カタカナ）ではない' do
         @user.last_name = 'yama'
         @user.valid?
-        expect(@user.errors.full_messages).to include('Last name is invalid')
+        expect(@user.errors.full_messages).to include('Last name Input full-width characters' )
       end
       it '名前のフリガナが全角（カタカナ）ではない' do
         @user.first_name_kana = '大'
         @user.valid?
-        expect(@user.errors.full_messages).to include('First name kana is invalid')
+        expect(@user.errors.full_messages).to include('First name kana Input full-width katakana characters')
       end
       it '名字のフリガナが全角（カタカナ）ではない' do
         @user.last_name_kana = '山'
         @user.valid?
-        expect(@user.errors.full_messages).to include('Last name kana is invalid')
+        expect(@user.errors.full_messages).to include('Last name kana Input full-width katakana characters')
       end
       it '生年月日が空欄' do
         @user.birthday = ''
