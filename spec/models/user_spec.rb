@@ -49,6 +49,26 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Nickname can't be blank")
       end
+      it '名前（全角）が空欄' do
+        @user.first_name = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("First name can't be blank")
+      end
+      it '名字（全角）が空欄' do
+        @user.last_name = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Last name can't be blank")
+      end
+      it '名前（フリガナ）が空欄' do
+        @user.first_name_kana = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("First name kana can't be blank")
+      end
+      it '名字（フリガナ）が空欄' do
+        @user.last_name_kana = ''
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Last name kana can't be blank")
+      end
       it '名前が全角（漢字・ひらがな・カタカナ）ではない' do
         @user.first_name = 'dai'
         @user.valid?
@@ -90,7 +110,7 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
       end
-      it 'パスワードが半角英数字混合ではない' do
+      it 'パスワードが半角数字のみ' do
         @user.password = '123456'
         @user.password_confirmation = '123456'
         @user.valid?
@@ -101,6 +121,18 @@ RSpec.describe User, type: :model do
         @user.password_confirmation = 'a1234'
         @user.valid?
         expect(@user.errors.full_messages).to include('Password is too short (minimum is 6 characters)')
+      end
+      it 'パスワードが半角英字のみ' do
+        @user.password = 'abcdef'
+        @user.password_confirmation = 'abcdef'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Password is invalid. Include both letters and numbers')
+      end
+      it 'パスワードに全角文字が含まれる' do
+        @user.password = 'Abcdef'
+        @user.password_confirmation = 'Abcdef'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Password is invalid. Include both letters and numbers')
       end
       it '重複したemailが存在する' do
         @user.save
