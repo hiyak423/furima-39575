@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :items
   has_many :orders
-  
+
   with_options presence: true do
     validates :nickname
     # 全角全角（漢字・ひらがな・カタカナ） format: { with: /\A[ぁ-んァ-ン一-龥]/ }
@@ -16,10 +16,9 @@ class User < ApplicationRecord
     validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
     validates :last_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
     validates :birthday
-    validates :email, uniqueness: true
-    # パスワードは、半角英数字混合
-    VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
-    validates :password, format: { with: VALID_PASSWORD_REGEX }
-    validates :password, length: { minimum: 6 }
   end
 end
+# email, passwordは、deviseにデフォルトで設定済みのため未記入
+# メールアドレスは、一意性, @を含む 入力が必須
+# パスワードは、半角英数字6文字以上での入力が必須
+# パスワードとパスワード（確認）は、値の一致が必須
