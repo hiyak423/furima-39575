@@ -17,8 +17,6 @@ class Item < ApplicationRecord
       validates :category_id, :status_id, :shipping_cost_id, :prefecture_id, :shipping_day_id
     end
 
-    with_options format: { with: /\A[0-9]+\z/ } do
-      validates :price, numericality: { greater_than: 300, less_than: 9_999_999 }
-    end
+    validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
   end
 end
