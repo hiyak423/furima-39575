@@ -5,7 +5,7 @@ function prices() {
     const addTaxDom = document.getElementById("add-tax-price");
     const ProfitDom = document.getElementById("profit");
 
-    addTaxDom.innerHTML = Math.round(inputValue * 0.1 );
+    addTaxDom.innerHTML = Math.floor(inputValue * 0.1 );
     ProfitDom.innerHTML = inputValue - addTaxDom.innerHTML;
     })
   };
