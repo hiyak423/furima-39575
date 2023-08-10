@@ -3,15 +3,16 @@ class OrderShipping
   attr_accessor :user_id, :item_id, :postcode, :prefecture_id, :city, :block, :building, :phone_number
 
 # バリデーションをかく
-  with_options presence :true do
+  with_options presence: true do
     validates :user_id
     validates :item_id
 
     validates :postcode
-    varidates :prefecture_id, numericality: { other_than: 1 }
+    validates :postcode, format: { with: /\A[0-9]{3}-[0-9]{4}\z/ }
+    validates :prefecture_id, numericality: { other_than: 1 }
     validates :city
     validates :block
-    validates :phone_number
+    validates :phone_number, format: { with: /\A[0-9]{11}\z/ }
   end
 
   def save
