@@ -9,4 +9,4 @@ function prices() {
     ProfitDom.innerHTML = inputValue - addTaxDom.innerHTML;
     })
   };
-  window.addEventListener("load",prices);
+  window.addEventListener('click',prices);
