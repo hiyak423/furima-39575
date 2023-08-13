@@ -18,7 +18,7 @@ RSpec.describe OrderShipping, type: :model do
         @order_shipping.phone_number = '12345678901'
         expect(@order_shipping).to be_valid
       end
-      it '番地が空欄' do
+      it '建物名が空欄(入力は任意)' do
         @order_shipping.building = ''
         expect(@order_shipping).to be_valid
       end
