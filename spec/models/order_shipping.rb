@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe OrderShipping, type: :model do
+  user = FactoryBot.create(:user)
+  item = FactoryBot.create(:item)
   before do
-    @order_shipping = FactoryBot.build(:order_shipping, user_id: 1, item_id: 1)
+    @order_shipping = FactoryBot.build(:order_shipping, user_id: user.id, item_id: item.id)
   end
 
   describe '配送先の登録' do
@@ -20,14 +22,6 @@ RSpec.describe OrderShipping, type: :model do
       end
       it '建物名が空欄(入力は任意)' do
         @order_shipping.building = ''
-        expect(@order_shipping).to be_valid
-      end
-      it 'user_idが含まれる' do
-        @order_shipping.user_id = 1
-        expect(@order_shipping).to be_valid
-      end
-      it 'item_idが含まれる' do
-        @order_shipping.item_id = 1
         expect(@order_shipping).to be_valid
       end
     end
@@ -67,8 +61,8 @@ RSpec.describe OrderShipping, type: :model do
         @order_shipping.valid?
         expect(@order_shipping.errors.full_messages).to include('Postcode is invalid. Enter it as follows (e.g. 123-4567)')
       end
-      it '都道府県が空欄' do
-        @order_shipping.prefecture_id = nil
+      it '都道府県の項目が[---]のとき' do
+        @order_shipping.prefecture_id = 1
         @order_shipping.valid?
         expect(@order_shipping.errors.full_messages).to include("Prefecture can't be blank")
       end
