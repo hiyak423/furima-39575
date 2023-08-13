@@ -1,10 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe OrderShipping, type: :model do
-  user = FactoryBot.create(:user)
-  item = FactoryBot.create(:item)
   before do
+    user = FactoryBot.create(:user)
+    item = FactoryBot.create(:item)
     @order_shipping = FactoryBot.build(:order_shipping, user_id: user.id, item_id: item.id)
+    sleep(0.1)
   end
 
   describe '配送先の登録' do
