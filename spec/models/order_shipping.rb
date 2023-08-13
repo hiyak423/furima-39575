@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe OrderShipping, type: :model do
   before do
-    @order_shipping = FactoryBot.build(:order_shipping)
+    @order_shipping = FactoryBot.build(:order_shipping, user_id: 1, item_id: 1)
   end
 
   describe '配送先の登録' do
@@ -20,6 +20,14 @@ RSpec.describe OrderShipping, type: :model do
       end
       it '番地が空欄' do
         @order_shipping.building = ''
+        expect(@order_shipping).to be_valid
+      end
+      it 'user_idが含まれる' do
+        @order_shipping.user_id = 1
+        expect(@order_shipping).to be_valid
+      end
+      it 'item_idが含まれる' do
+        @order_shipping.item_id = 1
         expect(@order_shipping).to be_valid
       end
     end
@@ -79,8 +87,13 @@ RSpec.describe OrderShipping, type: :model do
         @order_shipping.valid?
         expect(@order_shipping.errors.full_messages).to include('Phone number is invalid. Input only number')
       end
-      it '電話番号が10桁以下(9桁の場合)' do
+      it '電話番号が9桁以下(9桁の場合)' do
         @order_shipping.phone_number = '123456789'
+        @order_shipping.valid?
+        expect(@order_shipping.errors.full_messages).to include('Phone number is invalid. Input only number')
+      end
+      it '電話番号が12桁以上(12桁の場合)' do
+        @order_shipping.phone_number = '123456789012'
         @order_shipping.valid?
         expect(@order_shipping.errors.full_messages).to include('Phone number is invalid. Input only number')
       end
