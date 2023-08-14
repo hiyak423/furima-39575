@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:index, :create]
   before_action :sold, only: [:index, :create] # 売却済み、出品者はアクセスできない
+  before_action :valid # gonを読み込む
 
   def index
     gon.public_key = ENV['PAYJP_PUBLIC_KEY']
@@ -39,4 +40,9 @@ class OrdersController < ApplicationController
     @item = Item.find(params[:item_id])
     redirect_to root_path if current_user.id == @item.user_id || @item.order.present?
   end
+
+  def valid
+    gon.public_key = ENV['PAYJP_PUBLIC_KEY']
+  end
+
 end
