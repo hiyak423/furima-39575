@@ -8,11 +8,11 @@ class OrderShipping
     validates :item_id
     validates :token
 
-    validates :postcode, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is invalid. Enter it as follows (e.g. 123-4567)' }
-    validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
+    validates :postcode, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'を入力してください (例)123-4567' }
+    validates :prefecture_id, numericality: { other_than: 1, message: "を入力して下さい" }
     validates :city
     validates :block
-    validates :phone_number, format: { with: /\A\d{10,11}\z/, message: 'is invalid. Input only number' }
+    validates :phone_number, format: { with: /\A\d{10,11}\z/, message: 'は数値のみを入力してください' }
   end
 
   def save

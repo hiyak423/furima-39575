@@ -14,10 +14,12 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :image, :name, :description
 
-    with_options numericality: { other_than: 1 } do
+    with_options numericality: { other_than: 1, message: 'を入力してください' } do
       validates :category_id, :status_id, :shipping_cost_id, :prefecture_id, :shipping_day_id
     end
 
-    validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
+    validates :price,
+              numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999,
+                              message: 'を ¥300〜9,999,999以内で入力してください' }
   end
 end

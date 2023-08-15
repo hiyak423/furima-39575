@@ -44,5 +44,4 @@ class OrdersController < ApplicationController
   def valid
     gon.public_key = ENV['PAYJP_PUBLIC_KEY']
   end
-
 end
