@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    attributes:
+      item:
+        image: "商品画像"
+        name: "商品名"
+        description: "商品の説明"
+        category_id: "カテゴリ"
+        status_id: "商品の詳細"
+        shipping_cost_id: "配送料の負担"
+        prefecture_id: "発送元の地域"
+        shipping_day_id: "発送までの日数"
+        price: "価格"
+  errors:
+    messages:
+      blank: "を入力してください"
+  

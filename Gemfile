@@ -91,3 +91,4 @@ gem 'pry-rails'
 gem 'payjp'
 gem 'gon'
 gem "aws-sdk-s3", require: false
+gem 'rails-i18n'

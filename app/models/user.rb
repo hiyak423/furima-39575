@@ -12,12 +12,12 @@ class User < ApplicationRecord
     validates :birthday
 
     PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
-    validates_format_of :password, with: PASSWORD_REGEX, message: 'is invalid. Include both letters and numbers'
+    validates_format_of :password, with: PASSWORD_REGEX, message: 'は6文字以上の半角英数字で入力してください'
 
-    validates :last_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: 'Input full-width characters' }
-    validates :first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: 'Input full-width characters' }
-    validates :last_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'Input full-width katakana characters' }
-    validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/, message: 'Input full-width katakana characters' }
+    validates :last_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
+    validates :first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
+    validates :last_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
+    validates :first_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
   end
 end
 # email, passwordは、deviseにデフォルトで設定済みのため未記入
