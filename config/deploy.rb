@@ -5,7 +5,7 @@ lock '3.17.3'
 set :application, 'furima-39575'
 
 # どのリポジトリからアプリをpullするかを指定する
-set :repo_url,  'github.com:hiyak423/furima-39575.git'
+set :repo_url,  'git@github.com:hiyak423/furima-39575.git'
 set :branch, 'main'
 
 # バージョンが変わっても共通で参照するディレクトリを指定
