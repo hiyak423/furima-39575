@@ -34,29 +34,32 @@
 ### 商品の閲覧
 * ユーザー登録を行わなくても、商品の閲覧が可能です。商品は、トップページ下部に表示されています。
 * 商品画像をクリックすると、商品の詳細を閲覧できます。
-[![Image from Gyazo](https://i.gyazo.com/2acf235d1b2e4fc5f2db0e15f344fbc8.gif)](https://gyazo.com/2acf235d1b2e4fc5f2db0e15f344fbc8)
+### [![Image from Gyazo](https://i.gyazo.com/2acf235d1b2e4fc5f2db0e15f344fbc8.gif)](https://gyazo.com/2acf235d1b2e4fc5f2db0e15f344fbc8)
   
 ### ユーザー登録
 * トップページ上部右にある「新規登録」ページにて、ユーザー登録ができます。
 * 過去に新規登録済みのユーザーは、「ログイン」ページにて、ログインができます。
-  [![Image from Gyazo](https://i.gyazo.com/ec164bed0ea4cf5985e259a463db0232.gif)](https://gyazo.com/ec164bed0ea4cf5985e259a463db0232)
+### [![Image from Gyazo](https://i.gyazo.com/ec164bed0ea4cf5985e259a463db0232.gif)](https://gyazo.com/ec164bed0ea4cf5985e259a463db0232)
   
-
-
-
-
 
 ### 商品を出品する
 * トップページ右下にある「出品する」のロゴをクリックすると、出品ページに移動します。
 * 商品情報を漏れなく入力することで、商品を出品できます。
-
+### [![Image from Gyazo](https://i.gyazo.com/827d5eb779c9626f4deb99fa7332e225.gif)](https://gyazo.com/827d5eb779c9626f4deb99fa7332e225)
 
 
 ### 出品中の商品を編集、削除する
-* 出品者は出品中の商品に限り、商品の詳細画面から編集・削除ができます。*削除の取り消しは出来ません。
+* 出品者は出品中の商品に限り、商品の詳細画面から編集・削除ができます。
+* 商品の詳細画面から削除をクリックすると、商品の削除ができます。削除後の復旧はできません。
 * すでに売却済みの商品は、編集・削除を行うことができません。（各ボタンが非表示になります）
+### [![Image from Gyazo](https://i.gyazo.com/681be863bed12c1f0d17336b54121554.gif)](https://gyazo.com/681be863bed12c1f0d17336b54121554)
 
-* 
+
+### 出品中の商品を購入する
+* ログイン中のユーザーは、商品の詳細画面から購入ページへ移動し、必要事項を入力することで、購入ができます。
+### [![Image from Gyazo](https://i.gyazo.com/eafb9fc005be0ec07070273679518bf0.gif)](https://gyazo.com/eafb9fc005be0ec07070273679518bf0)
+
+  
 * Ruby version
 
 * System dependencies
