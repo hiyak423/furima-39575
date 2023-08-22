@@ -34,12 +34,12 @@
 ### 商品の閲覧
 * ユーザー登録を行わなくても、商品の閲覧が可能です。商品は、トップページ下部に表示されています。
 * 商品画像をクリックすると、商品の詳細を閲覧できます。
-[![Image from Gyazo](https://i.gyazo.com/18d4d2971e95d065c8db86ae929db768.gif)](https://gyazo.com/18d4d2971e95d065c8db86ae929db768)
-
+[![Image from Gyazo](https://i.gyazo.com/2acf235d1b2e4fc5f2db0e15f344fbc8.gif)](https://gyazo.com/2acf235d1b2e4fc5f2db0e15f344fbc8)
   
 ### ユーザー登録
 * トップページ上部右にある「新規登録」ページにて、ユーザー登録ができます。
 * 過去に新規登録済みのユーザーは、「ログイン」ページにて、ログインができます。
+  [![Image from Gyazo](https://i.gyazo.com/ec164bed0ea4cf5985e259a463db0232.gif)](https://gyazo.com/ec164bed0ea4cf5985e259a463db0232)
   
 
 
