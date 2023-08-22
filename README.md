@@ -133,5 +133,4 @@ belongs_to :order
 % bundle install　　
 % rails db:create　　
 % rails db:migrate　　
-% yarn install
 ```
