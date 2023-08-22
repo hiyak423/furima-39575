@@ -34,30 +34,31 @@
 ### 商品の閲覧
 * ユーザー登録を行わなくても、商品の閲覧が可能です。商品は、出品日時が新しいものから表示しています。
 * 商品画像をクリックすると、商品の詳細を閲覧できます。
-### [![Image from Gyazo](https://i.gyazo.com/2acf235d1b2e4fc5f2db0e15f344fbc8.gif)](https://gyazo.com/2acf235d1b2e4fc5f2db0e15f344fbc8)
-  
+### ![op6HXzIus4wJQ7xFQnF51692685304-1692685318](https://github.com/hiyak423/furima-39575/assets/138428189/91e8e5a7-694a-4a16-b08a-1086bc276fc9)
+
+
 ### ユーザー登録
 * トップページ上部右にある「新規登録」ページにて、ユーザー登録ができます。
 * 過去に新規登録済みのユーザーは、「ログイン」ページにて、ログインができます。
-### [![Image from Gyazo](https://i.gyazo.com/ec164bed0ea4cf5985e259a463db0232.gif)](https://gyazo.com/ec164bed0ea4cf5985e259a463db0232)
+### ![w0KwxzEW13MaQykKNAk41692685608-1692685623](https://github.com/hiyak423/furima-39575/assets/138428189/f03442e0-338d-42b6-bdcd-24baf5749ba1)
   
 
 ### 商品を出品する
 * トップページ右下にある「出品する」のロゴをクリックすると、出品ページに移動します。
 * 商品情報を漏れなく入力することで、商品を出品できます。
-### [![Image from Gyazo](https://i.gyazo.com/827d5eb779c9626f4deb99fa7332e225.gif)](https://gyazo.com/827d5eb779c9626f4deb99fa7332e225)
+### ![iOBYY1jdWelGKtZ3Yi0Q1692685731-1692685751](https://github.com/hiyak423/furima-39575/assets/138428189/cf51efde-f8be-495d-98fa-68b9b4a9b92f)
 
 
 ### 出品中の商品を編集、削除する
 * 出品者は出品中の商品に限り、商品の詳細画面から編集・削除ができます。
 * 商品の詳細画面から削除をクリックすると、商品の削除ができます。削除後の復旧はできません。
 * すでに売却済みの商品は、編集・削除を行うことができません。（各ボタンが非表示になります）
-### [![Image from Gyazo](https://i.gyazo.com/681be863bed12c1f0d17336b54121554.gif)](https://gyazo.com/681be863bed12c1f0d17336b54121554)
+### ![Cw7gsGwAkDX2g0K0mb1J1692685235-1692685253](https://github.com/hiyak423/furima-39575/assets/138428189/c6144a65-d619-49e4-b600-edf6aa3a439d)
 
 
 ### 出品中の商品を購入する
 * ログイン中のユーザーは、商品の詳細画面から購入ページへ移動し、必要事項を入力することで、購入ができます。
-### [![Image from Gyazo](https://i.gyazo.com/eafb9fc005be0ec07070273679518bf0.gif)](https://gyazo.com/eafb9fc005be0ec07070273679518bf0)
+### ![i4MNT1rOA59GJa1SFGRd1692684982-1692685000](https://github.com/hiyak423/furima-39575/assets/138428189/c566fdf5-fc7c-4d55-941d-44125b75f863)
 
   
 * Ruby version
