@@ -36,7 +36,6 @@
 * 商品画像をクリックすると、商品の詳細を閲覧できます。
 [![Image from Gyazo](https://i.gyazo.com/18d4d2971e95d065c8db86ae929db768.gif)](https://gyazo.com/18d4d2971e95d065c8db86ae929db768)
 
-
   
 ### ユーザー登録
 * トップページ上部右にある「新規登録」ページにて、ユーザー登録ができます。
