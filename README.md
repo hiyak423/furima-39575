@@ -7,13 +7,12 @@
 # アプリケーション概要
 ユーザー登録を行い、商品の出品、購入ができます。
 
-出品された商品は、トップページ下部に表示にされ、売却済みの商品はsoldoutが表示されます。
+商品はトップページ下部に表示にされ、売却済みの際はsoldoutが表示されます。
 
 
-# URL
-### URL (AWS EC2によるデプロイ)  
+# URL・Basic認証  
+### AWS EC2を利用
 * http://52.197.62.88
-### Basic認証  
 * ID: admin  
 * Pass: 0423
 
@@ -27,7 +26,7 @@
 * パスワード: furima1
 ### 購入用カード情報
 * 番号：4242424242424242
-* 期限：12/24 月/年
+* 期限：12/24
 * セキュリティコード：123
 
 # ご利用方法
@@ -60,26 +59,11 @@
 * ログイン中のユーザーは、商品の詳細画面から購入ページへ移動し、必要事項を入力することで、購入ができます。
 ### ![i4MNT1rOA59GJa1SFGRd1692684982-1692685000](https://github.com/hiyak423/furima-39575/assets/138428189/c566fdf5-fc7c-4d55-941d-44125b75f863)
 
-  
-* Ruby version
-  
 
-* System dependencies
+# ER図
+![furima-39575 ER図_230801](https://github.com/hiyak423/furima-39575/assets/138428189/6d43bc10-b0f9-46cf-a4cf-90b897892577)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+# テーブル設計
 ## users テーブル
 | Column             | Type                | Options                      |
 |--------------------|---------------------|------------------------------|
@@ -133,3 +117,21 @@ belongs_to :user
 | order              | references          | null:false foreign_key: true |
 ### Association
 belongs_to :order
+
+
+# 開発環境
+* Ruby 3.2.0
+* rails 7.0.6
+* mysql2 0.5.5
+  
+
+# ローカルでの動作方法(git clone)
+以下コマンドを実行する  
+```ruby
+% git clone https://github.com/hiyak423/furima-39575.git　
+% cd furima-39575　　
+% bundle install　　
+% rails db:create　　
+% rails db:migrate　　
+% yarn install
+```
