@@ -32,7 +32,7 @@
 
 # ご利用方法
 ### 商品の閲覧
-* ユーザー登録を行わなくても、商品の閲覧が可能です。商品は出品された日時が新しいものから順に上から表示しています。
+* ユーザー登録を行わなくても、商品の閲覧が可能です。商品は、出品日時が新しいものから表示しています。
 * 商品画像をクリックすると、商品の詳細を閲覧できます。
 ### [![Image from Gyazo](https://i.gyazo.com/2acf235d1b2e4fc5f2db0e15f344fbc8.gif)](https://gyazo.com/2acf235d1b2e4fc5f2db0e15f344fbc8)
   
@@ -61,6 +61,7 @@
 
   
 * Ruby version
+  
 
 * System dependencies
 
