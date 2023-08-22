@@ -6,6 +6,7 @@
 
 # アプリケーション概要
 ユーザー登録を行い、商品の出品、購入ができます。
+
 商品はトップページ下部に表示にされ、売却済みの商品はsoldoutが表示されます。
 
 
@@ -33,8 +34,8 @@
 ### 商品の閲覧
 * ユーザー登録を行わなくても、商品の閲覧が可能です。商品は、トップページ下部に表示されています。
 * 商品画像をクリックすると、商品の詳細を閲覧できます。
-[![Image from Gyazo](https://i.gyazo.com/2acf235d1b2e4fc5f2db0e15f344fbc8.gif)](https://gyazo.com/2acf235d1b2e4fc5f2db0e15f344fbc8)
 
+[![Image from Gyazo](https://i.gyazo.com/18d4d2971e95d065c8db86ae929db768.gif)](https://gyazo.com/18d4d2971e95d065c8db86ae929db768)
 
 
   
